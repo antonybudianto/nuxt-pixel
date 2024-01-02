@@ -3,13 +3,15 @@
 import { defineNuxtConfig } from "nuxt/config";
 import commonjs from "vite-plugin-commonjs";
 
+const vueEnv = process.env.NODE_ENV === "development" ? ".js" : ".prod.js";
+
 export default defineNuxtConfig({
   ssr: false,
   telemetry: false,
   devtools: { enabled: false },
   plugins: ["~/plugins/moment.js", "~/plugins/mekari-pixel.js"],
   alias: {
-    vue: "@vue/compat",
+    vue: `@vue/compat/dist/vue.esm-browser${vueEnv}`,
     "vue/server-renderer": "vue-server-renderer"
   },
   vite: {
