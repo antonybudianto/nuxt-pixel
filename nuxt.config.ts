@@ -34,5 +34,14 @@ export default defineNuxtConfig({
   },
   experimental: {
     noVueServer: true
+  },
+
+  modules: ["nuxt-vite-legacy"],
+  // @ts-expect-error
+  legacy: {
+    targets: ["chrome 49"],
+    additionalLegacyPolyfills: [
+      "mdn-polyfills/Element.prototype.getAttributeNames"
+    ]
   }
 });
