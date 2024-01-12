@@ -3,10 +3,11 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "clean": "nuxt cleanup",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "serve": "npx serve .output/public",
-    "serve1": "yarn build && yarn generate && yarn serve",
+    "gserve": "yarn generate && yarn serve",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
@@ -14,19 +15,21 @@
     "@chakra-ui/utils": "1.10.4",
     "@mekari/pixel": "0.12.28",
     "@unhead/vue": "^1.8.9",
-    "@vue/compat": "^3.1.0",
+    "@vue/compat": "3.4.3",
     "js-cookie": "^3.0.1",
     "lodash": "4.17.21",
+    "mdn-polyfills": "^5.20.0",
     "moment": "2.29.4",
-    "vue": "^3.1.0",
-    "vue-server-renderer": "^2.7.15"
+    "vue": "3.4.3",
+    "vue-server-renderer": "2.7.16"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
     "@types/node": "^18.16.19",
-    "@vue/compiler-sfc": "^3.1.0",
-    "nuxt": "^3.6.2",
+    "@vue/compiler-sfc": "3.4.3",
+    "nuxt": "3.9.0",
+    "nuxt-vite-legacy": "^1.2.0",
     "vite-plugin-commonjs": "^0.10.1"
   }
 }
